@@ -13,13 +13,13 @@ public class GreetingServlet extends HttpServlet {
 		String title = null ;
 		String votreNom = null;
 		String nomPrenom = "Pseudo";
-		votreNom = request.getParameter("ok");
+		votreNom = request.getParameter("nom");
 		if (votreNom != null)
 			nomPrenom = votreNom.toUpperCase();
 			title = "<H1>Greeting " + nomPrenom + "!</H1>\n";
 			out.println(docType +
 				"<HTML>\n" +
-				"<HEAD><TITLE>Greetings Servlet</TITRE></HEAD>\n" +
+				"<HEAD><TITLE>Greetings Servlet</TITLE></HEAD>\n" +
 				"<BODY BGCOLOR =\"#FDF5E6\">\n" +
 				title +
 				"</BODY></HTML>");
